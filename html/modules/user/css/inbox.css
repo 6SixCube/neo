@@ -1,7 +1,0 @@
-.module-user table.inbox td {
-	vertical-align: middle;
-}
-
-.module-user table.inbox .media.message .media-body {
-	vertical-align: middle !important;
-}

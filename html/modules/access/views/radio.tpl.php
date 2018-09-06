@@ -1,1 +1,0 @@
-<td class="text-center access-radio<?php if ($active) echo ' '.$class ?>" data-class="<?php echo $class ?>"><big><i class="fa fa-toggle-<?php echo $active ? 'on' : 'off' ?> fa-fw text-<?php echo $active ? $class : 'muted' ?>"></i></big></td>
