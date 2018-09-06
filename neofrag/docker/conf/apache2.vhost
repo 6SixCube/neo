@@ -1,0 +1,24 @@
+<VirtualHost *:80>
+        ServerName neo
+	DirectoryIndex index.htm index.php index.html
+        
+	ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/html
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+	<Directory /var/www/html>
+	Options Indexes FollowSymLinks
+	AllowOverride all
+	Require all granted
+	</Directory>
+
+	<ifModule mod_rewrite.c>
+	RewriteEngine On
+	</ifModule>
+
+
+</VirtualHost>
+
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet

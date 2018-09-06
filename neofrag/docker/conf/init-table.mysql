@@ -1,0 +1,4 @@
+CREATE DATABASE neo;
+CREATE USER 'neo'@'localhost' IDENTIFIED BY 'neo';
+GRANT ALL PRIVILEGES ON neo . * TO 'neo'@'localhost';
+FLUSH PRIVILEGES;

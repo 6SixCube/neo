@@ -24,12 +24,11 @@ ${DOCKER_CMD} run \
   -v "${SOURCEDOCKER}:/var/docker" \
   -v "${SOURCENEO}:/var/www/html" \
   -v /tmp:/tmp  \
+  --add-host neo:127.0.1.1 \
+  --add-host neo:172.16.3.11 \
   ${DOCKER_IMAGE_NAME}
-# /var/docker/prog.sh 
    
 
-#${DOCKER_CMD} exec -it neo "/bin/zsh" 
-#${DOCKER_CMD} exec -e COLUMNS="${COLUMNS}" -e LINES="${LINES}" -e TERM=$TERM -it neo ${SHELL}
 ${DOCKER_CMD} exec -e COLUMNS="${COLUMNS}" -e LINES="${LINES}" -e TERM=$TERM -it neo /var/docker/prog.sh "${SHELL}"
 
 echo "Stopping QA Tools Docker image"                                                                                                  

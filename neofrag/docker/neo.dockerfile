@@ -45,9 +45,6 @@ ENV http_proxy ""
 ENV https_proxy ""
 ENV PATH "/usr/local/bin:/usr/local/sbin:$PATH"
 
-# neo
-# RUN mkdir -p /home/neo
-
 
 RUN mkdir -p /var/docker
 
@@ -61,8 +58,6 @@ RUN update-locale  fr_FR.UTF-8
 RUN echo 'root:root' | chpasswd
 RUN /bin/echo -e "neo\tALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-# hosts
-RUN echo "127.0.0.1\tlocalhost\n127.0.1.1\tneo" > /etc/hosts
 
 # User neo 
 RUN useradd -c 'neo' -m -d /home/neo -s /bin/bash neo

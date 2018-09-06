@@ -10,4 +10,4 @@ then
   exit 1
 fi
 
-${DOCKER_CMD} build -f "${PROGRAM_DIR}/neo.dockerfile" -t "${DOCKER_IMAGE_NAME}" "${PROGRAM_DIR}"
+${DOCKER_CMD} build -f "${PROGRAM_DIR}/neo.dockerfile" -t "${DOCKER_IMAGE_NAME}" "${PROGRAM_DIR}" 
