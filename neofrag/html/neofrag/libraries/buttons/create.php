@@ -1,0 +1,23 @@
+<?php
+/**
+ * https://neofr.ag
+ * @author: Michaël BILCOT <michael.bilcot@neofr.ag>
+ */
+
+namespace NF\NeoFrag\Libraries\Buttons;
+
+use NF\NeoFrag\Library;
+
+class Create extends Library
+{
+	public function __invoke($url = '', $title = '', $icon = 'fa-plus')
+	{
+		return $this->button()
+					->title($title)
+					->url($url)
+					->icon($icon)
+					->color('primary')
+					->outline()
+					->compact();
+	}
+}
